@@ -10,7 +10,14 @@ module.exports = {
     'scripts' : ['front/js/modules/*.js', 'front/js/moules/**/*.js'],
     'styles' : ['front/css/stylus/*.styl', 'front/css/stylus/**/**/*.styl'],
     'image' : 'front/image/*',
-    'views' : ['front/view/*.jade']
+    'views' : ['back/modules/**/views/*.jade', 'back/modules/**/views/**/*.jade']
+  },
+
+  'nodemon': {
+    'script': 'back/bin/www',
+    'ext': 'js',
+    'env': 'development',
+    'watch': 'back/'
   },
 
   'styles': {
@@ -37,11 +44,6 @@ module.exports = {
     'src': 'front/build/**/*.{html,xml,json,css,js,js.map}',
     'dest': 'front/build/',
     'options': {}
-  },
-
-  'view': {
-    'src' : 'front/view/*.jade',
-    'dest' : 'front/build/view'
   },
 
   'dist': {

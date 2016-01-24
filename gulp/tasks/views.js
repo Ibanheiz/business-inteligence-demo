@@ -1,13 +1,11 @@
 'use strict';
 
-var gulp = require('gulp');
-var jade = require('gulp-jade');
-var config       = require('../config');
+var config         = require('../config');
+var gulp           = require('gulp');
+var templateCache  = require('gulp-angular-templatecache');
+var browserSync  = require('browser-sync');
 
-gulp.task('views', function() {
-  gulp.src(config.view.src)
-    .pipe(jade({
-      pretty: true
-    }))
-    .pipe(gulp.dest(config.view.dest))
+// Views task
+gulp.task('views', function () {
+  browserSync.reload();
 });

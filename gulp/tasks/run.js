@@ -4,17 +4,18 @@ var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('run', function (cb) {
+
   switch (process.env.NODE_ENV) {
   case 'development':
 
     global.isProd = false;
-    runSequence(['styles', 'fonts', 'images', 'views', 'browserify'], 'watch', cb);
+    runSequence(['styles', 'fonts', 'images', 'browserify'], 'watch', cb);
 
     break;
   case 'production':
 
     global.isProd = true;
-    runSequence(['styles', 'fonts', 'images', 'views', 'browserify'], 'gzip', cb);
+    runSequence(['styles', 'fonts', 'images', 'browserify'], 'gzip', cb);
 
     break;
 
