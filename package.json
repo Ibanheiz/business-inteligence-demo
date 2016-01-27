@@ -4,7 +4,8 @@
   "description": "Demo para aplicação de análise de negócio",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "gulp run"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "angular-messages": "^1.4.9",
     "angular-mocks": "^1.4.9",
     "angular-route": "^1.4.9",
+    "angular-sanitize": "^1.4.9",
     "babel-core": "^6.4.5",
     "babelify": "^7.2.0",
     "brfs": "^1.4.3",

@@ -1,0 +1,30 @@
+div(layout="column", style="height:100vh;" ng-cloak)
+  section(layout='row', flex)
+    md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$mdMedia('gt-md')")
+        md-toolbar.md-theme-indigo
+          h1.md-toolbar-tools Menu Esquerdo
+        md-content(layout-padding)
+          p(hide-md, show-gt-md)
+            | Item 1
+          p(hide-md, show-gt-md)
+            | Item 2
+          p(hide-md, show-gt-md)
+            | Item 3
+
+    md-content(flexlayout-padding)
+      div(layout='column', layout-filllayout-align='top center')
+        div
+          md-button.md-primary(ng-click='toggleRight()', ng-hide='isOpenRight()')
+            | Abrir Menu Direito
+      div(flex)
+    md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id='right')
+      md-toolbar.md-theme-light
+        h1.md-toolbar-tools Menu Direito
+      md-content(layout-padding)
+        form
+          md-input-container
+            label(for='testInput') Test input
+            input#testInput(type='text', ng-model='data', md-autofocus)
+        md-button.md-primary(ng-click='closeRight()')
+          | Fechar Menu Direito
+
